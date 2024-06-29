@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Librerias -->
+    <!-- Moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/es.min.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- AOS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Letra -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Brenda & Valentin</title>
+</head>
+<body>
+    <header><h1>Nos casamos...</h1></header>
+    <img src="img/foto para fondo de cuestionario.jpg" alt="Anillos">
+    <div data-aos="fade-left" id="timer"></div>
+    <img data-aos="fade-up" class="Collage" src="img/Collage.png" alt="Collage">
+
+    <div class="Info" data-aos="flip-down">
+        <h1>Brenda y Valentin</h1>
+        <p>Nos encantaria que nos acomparan en este dia tan especial</p>
+    </div>
+
+    <div class="Sitios">
+        <div class="Lugar" data-aos="zoom-in-left">
+            <img src="img/Templo.jpg" alt="Templo">
+            <div class="Detalles">
+                <div>
+                    <img src="img/church.png" alt="icono">
+                    <h1>Templo</h1>
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <h2>Nuestra señora del Refugio</h2>
+                <p>Mariano Matamoros No. 213 centro, Colima.</p>
+                <h3>7:00 PM</h3>
+                <button onclick="ubicacion()"><i class="fa-solid fa-location-dot"></i></button>
+            </div>
+        </div>
+
+        <div class="Lugar" data-aos="zoom-in-right">
+            <img src="img/Hacienda.jpg" alt="Templo">
+            <div class="Detalles">
+                <div>
+                    <img src="img/brindis.png" alt="icono">
+                    <h1>Jardin de Eventos</h1>
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <h2>Hacienda Pastores</h2>
+                <p>Prol. Hidalgo, Rumbo al Chivato, Villa de Alvarez.</p>
+                <h3>8:30 PM</h3>
+                <button onclick="ubicacion2()"><i class="fa-solid fa-location-dot"></i></button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="Itinerario" data-aos="fade-up">
+        <h2>Itinerario</h2>
+        <ul>
+            <li>
+                <img src="img/church.png" alt="catedral"> 7:00 pm
+            </li>
+            <li>
+                <img src="img/recepcion.png" alt="recepcion"> 8:30 pm
+            </li>
+            <li>
+                <img src="img/cena.png" alt="cena"> 9:30 pm
+            </li>
+            <li>
+                <img src="img/brindis.png" alt="catedral"> 10:30 pm
+            </li>
+            <li>
+                <img src="img/carrito.png" alt="catedral"> 3:30 am
+            </li>
+        </ul>
+    </div>
+
+    <div class="Vestimenta">
+        <h2>Codigo de vestimenta</h2>
+        <div>
+            <div>
+                <img src="img/Dama.png" alt="Dama">
+                <p>Dama</p>
+            </div>
+            <div>
+                <img src="img/Caballero.png" alt="Dama">
+                <p>Caballero</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="Asistencia">
+        <h2>Esperamos verte ahi</h2>
+        <div>
+            <p>Por Favor confirma tu asistencia lo antes posible</p>
+            <a href="https://forms.gle/7n97KXU9zVjxdXcJ9"><img src="img/asistencia.png" alt="asistencia"></a>
+        </div>
+    </div>
+
+    <div class="Regalo">
+        <p>Nuestro mejor regalo es tú asistencia, pero si nos quieres hacer algún obsequio, hemos creado las siguientes mesas de regalos...</p>
+        <div class="Mesas">
+            <div class="Mesa">
+                <img src="img/Marina.png" alt="Logo">
+                <p>MR-00002404</p>
+            </div>
+            <div class="Mesa">
+                <img src="img/Liverpool.png" alt="Logo">
+                <p>51460027</p>
+            </div>
+        </div>
+        <p>O si prefieres en efectivo aquí te dejamos un número de tarjeta</p>
+        <div class="Tarjeta">
+            <i class="fa-regular fa-credit-card"></i>
+            <p>BBVA<br>4152-3140-2366-5683<br>Valentín García Pizano</p>
+        </div>
+    </div>
+    
+    <footer data-aos="fade-up"><h1>Gracias</h1></footer>
+    <!-- JS -->
+    <script src="temporizador.js"></script>
+    <script src="funcionBotones.js"></script>
+    <script>
+        AOS.init({
+            easing: 'ease-out-back',
+            duration: 1000
+		});
+    </script>
+</body>
+</html>
