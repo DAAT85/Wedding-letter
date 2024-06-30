@@ -49,11 +49,13 @@
 body {
   max-width: 100%;
   padding: 100px 0;
-  background-color: whitesmoke;
+  background-image: url(img/fondo\ flores.jpg);
+  background-repeat: repeat;
   display: grid;
   place-items: center;
   gap: 200px;
   color: var(--main-color);
+  
 }
 
 :root {
@@ -91,9 +93,8 @@ h2 {
 }
 
 #letrasTimer{
-  display: flex;
-  align-items: baseline;
-
+  display: grid;
+  place-items: center;
 }
 
 .Fecha {
@@ -217,7 +218,7 @@ h2 {
 .Itinerario ul li {
   width: 50%;
   font-size: 40px;
-  font-family: "GothicItaly", "Playwrite DE Grund", "sans-serif";
+  /* font-family: "GothicItaly", "Playwrite DE Grund", "sans-serif"; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -351,6 +352,15 @@ h2 {
 
   .Lugar {
     width: 80%;
+    position: relative;
+    bottom: 12rem;
+  }
+
+  .Info{
+    display: grid;
+    place-items: center;
+    position: relative;
+    bottom: 10rem;
   }
 
   .timer{
@@ -359,12 +369,85 @@ h2 {
   }
 
   #letrasTimer{
-    font-size: 5.3rem;
+    font-size: 6.3rem;
   }
   
+  .marquee {
+    width: 1500px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .marquee-content {
+    display: inline-block;
+    padding-left:100%;
+    animation: marquee 10s linear infinite;
+  }
+
+  .marquee-content img{
+    width: 90rem;
+    height: 50rem;
+  }
+  
+  @keyframes marquee {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+  }
+  /* marquee img{
+    width: 90rem;
+    height: 50rem;
+  } */
+
+  #temploTitle{
+    font-size: 5rem;
+  }
+
+  #señoraRefugio{
+    font-family: "GothicItaly" ,sans-serif;
+    font-size: 3.9rem;
+  }
+
+  #jardinTitle{
+    font-size: 5rem;
+  }
+
+  #haciendaTitle{
+    font-size: 3.9rem;
+    font-family: "GothicItaly" ,sans-serif;
+  }
+
+  #itinerarioTitle{
+    font-size: 8rem;
+    font-family: "AnotherDay", sans-serif;
+  }
+
+  #codigoTitle{
+    font-size: 7rem;
+  }
+
+  .Vestimenta{
+    position: relative;
+    bottom: 13rem;
+  }
+
+  .Vestimenta img{
+    margin-top: 8rem;
+  }
+
+  #formal{
+    font-size: 3.5rem;
+  }
 
   .Detalles p {
     font-size: 30px;
+  }
+
+  .Asistencia h2{
+    font-size: 8rem;
+  }
+
+  #asistenciaP{
+    font-size: 3rem;
   }
 
   .Detalles button {
@@ -374,6 +457,8 @@ h2 {
 
   .Itinerario {
     width: 80%;
+    position: relative;
+    bottom: 13rem;
   }
 
   .Asistencia div img {
@@ -382,7 +467,18 @@ h2 {
     transition: 300ms ease-in-out;
   }
 
+  .Asistencia{
+    position: relative;
+    bottom: 15rem;
+  }
+
+  .Regalo{
+    position: relative;
+    bottom: 20rem;
+  }
+
   .Regalo p {
     padding: 0 5%;
   }
+
 }

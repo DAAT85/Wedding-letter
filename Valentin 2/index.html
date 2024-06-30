@@ -24,11 +24,18 @@
     <header><h1>Nos casamos...</h1></header>
     <img src="img/foto para fondo de cuestionario.jpg" alt="Anillos">
     <div data-aos="fade-left" id="timer"></div>
-    <img data-aos="fade-up" class="Collage" src="img/Collage.png" alt="Collage">
+
+    <div class="marquee">
+        <div class="marquee-content">
+            <img src="img/Collage.png" alt="Collage">
+            <img src="img/carrete 2.png" alt="">
+        </div>
+    </div>
+
 
     <div class="Info" data-aos="flip-down">
         <h1>Brenda y Valentin</h1>
-        <p>Nos encantaria que nos acomparan en este dia tan especial</p>
+        <p>Nos encantaria que nos acompañaran en este dia tan especial...</p>
     </div>
 
     <div class="Sitios">
@@ -37,10 +44,10 @@
             <div class="Detalles">
                 <div>
                     <img src="img/church.png" alt="icono">
-                    <h1>Templo</h1>
+                    <h1 id="temploTitle">Templo</h1>
                     <i class="fa-solid fa-location-dot"></i>
                 </div>
-                <h2>Nuestra señora del Refugio</h2>
+                <h2 id="señoraRefugio">Nuestra señora del Refugio</h2>
                 <p>Mariano Matamoros No. 213 centro, Colima.</p>
                 <h3>7:00 PM</h3>
                 <button onclick="ubicacion()"><i class="fa-solid fa-location-dot"></i></button>
@@ -52,10 +59,10 @@
             <div class="Detalles">
                 <div>
                     <img src="img/brindis.png" alt="icono">
-                    <h1>Jardin de Eventos</h1>
+                    <h1 id="jardinTitle">Jardin de Eventos</h1>
                     <i class="fa-solid fa-location-dot"></i>
                 </div>
-                <h2>Hacienda Pastores</h2>
+                <h2 id="haciendaTitle">Hacienda Pastores</h2>
                 <p>Prol. Hidalgo, Rumbo al Chivato, Villa de Alvarez.</p>
                 <h3>8:30 PM</h3>
                 <button onclick="ubicacion2()"><i class="fa-solid fa-location-dot"></i></button>
@@ -64,32 +71,35 @@
     </div>
     
     <div class="Itinerario" data-aos="fade-up">
-        <h2>Itinerario</h2>
+        <h2 id="itinerarioTitle">Itinerario</h2>
         <ul>
             <li>
                 <img src="img/church.png" alt="catedral"> 7:00 pm
-            </li>
+            </li><br>
             <li>
-                <img src="img/recepcion.png" alt="recepcion"> 8:30 pm
-            </li>
+                <img src="img/icono recepcion.png" alt="recepcion"> 8:30 pm
+            </li><br>
             <li>
                 <img src="img/cena.png" alt="cena"> 9:30 pm
-            </li>
+            </li><br>
             <li>
                 <img src="img/brindis.png" alt="catedral"> 10:30 pm
-            </li>
+            </li><br>
             <li>
                 <img src="img/carrito.png" alt="catedral"> 3:30 am
-            </li>
+            </li><br>
         </ul>
     </div>
 
-    <div class="Vestimenta">
-        <h2>Codigo de vestimenta</h2>
+    <div class="Vestimenta" data-aos="zoom-in-left">
+        <h2 id="codigoTitle">Codigo de vestimenta</h2>
         <div>
             <div>
                 <img src="img/Dama.png" alt="Dama">
                 <p>Dama</p>
+            </div>
+            <div>
+                <p id="formal">Formal</p>
             </div>
             <div>
                 <img src="img/Caballero.png" alt="Dama">
@@ -98,23 +108,23 @@
         </div>
     </div>
 
-    <div class="Asistencia">
+    <div class="Asistencia" data-aos="flip-down">
         <h2>Esperamos verte ahi</h2>
         <div>
-            <p>Por Favor confirma tu asistencia lo antes posible</p>
+            <p id="asistenciaP">Por Favor confirma tu asistencia lo antes posible</p>
             <a href="https://forms.gle/7n97KXU9zVjxdXcJ9"><img src="img/asistencia.png" alt="asistencia"></a>
         </div>
     </div>
 
     <div class="Regalo">
-        <p>Nuestro mejor regalo es tú asistencia, pero si nos quieres hacer algún obsequio, hemos creado las siguientes mesas de regalos...</p>
+        <p id="regaloP">Nuestro mejor regalo es tú asistencia, pero si nos quieres hacer algún obsequio, hemos creado las siguientes mesas de regalos...</p>
         <div class="Mesas">
             <div class="Mesa">
-                <img src="img/Marina.png" alt="Logo">
+                <a href="https://www.lamarina.com.mx"><img src="img/Marina.png" alt="Logo"></a>
                 <p>MR-00002404</p>
             </div>
             <div class="Mesa">
-                <img src="img/Liverpool.png" alt="Logo">
+                <a href="https://www.liverpool.com.mx/tienda/home"><img src="img/Liverpool.png" alt="Logo"></a>
                 <p>51460027</p>
             </div>
         </div>

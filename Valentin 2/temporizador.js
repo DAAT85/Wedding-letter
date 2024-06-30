@@ -15,7 +15,7 @@ function updateTimer() {
     // Actualiza el contenido del temporizador en el HTML
     document.getElementById('timer').innerHTML = 
         `<center><h2 class="timer">${days} : ${hours} : ${minutes} : ${seconds}</h2></center>
-        <center><h2 id="letrasTimer">Dias - Horas - Minutos - Segundos</h2></center>`;
+        <center><h2 id="letrasTimer">Dias - Hrs. - Min. - Seg.</h2></center>`;
 
     // Si el temporizador llega a cero, detén la actualización
     if (duration.asSeconds() <= 0) {
