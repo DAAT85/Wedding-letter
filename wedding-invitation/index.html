@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Librerias -->
+    <!-- Moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/es.min.js"></script>
+    <!-- FontAwesome --><!--Libreria para colocar los iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- AOS--><!--Libreria de animaciones, cada animacion esta colocada en un div-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Letra -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Brenda & Valentin</title>
+</head>
+<body>
+    <!--La etiqueta audio, literal hace eso, colocas un audio pero OJO, solo lo colocas, no se reproduce-->
+    <audio id="music" src="Music.mp3"></audio>
+
+    <header data-aos="fade-up"><h1>Nos casamos...</h1></header>
+    <button onclick="music()" id="BtnMusic"><i class="fa-solid fa-music"></i></button>
+    <img src="img/foto para fondo de cuestionario.jpg" alt="Anillos">
+    <!--Esto es el temporizador que esta creado 100% por moment.js-->
+    <div data-aos="fade-left" id="timer"></div>
+
+    <!--Es el carrusel de fotos, todo esta a base de CSS-->
+    <div class="marquee">
+        <div class="marquee-content">
+            <img src="img/carrete completo.png" alt="carrusel"><img src="img/carrete completo.png" alt="carrusel"><img src="img/carrete completo.png" alt="carrusel"><img src="img/carrete completo.png" alt="carrusel"><img src="img/carrete completo.png" alt="carrusel"><img src="img/carrete completo.png" alt="carrusel"><img src="img/carrete completo.png" alt="carrusel"><!--La propiedad alt, no afecta en nada al codigo ni a la pagina, solo es para dar contexto a los programadores de que va la imagen-->
+        </div>
+    </div>
+
+    <!--Como la intro a la invitación-->
+    <div class="Info" data-aos="ease-out-back"><!--La propiedad data-aos, es la libreria AOS, son cosas ya hechas, le agregas la que quieras y te dara la animacion-->
+        <h1>Brenda & Valentin</h1>
+        <p id="encantariaP">Nos encantaria que nos acompañaran en este dia tan especial...</p>
+    </div>
+
+    <!--Lugar del evento-->
+    <div class="Sitios">
+        <div class="Lugar" data-aos="zoom-in-left">
+            <img src="img/Templo.jpg" alt="Templo">
+            <div class="Detalles">
+                <div>
+                    <img src="img/church.png" alt="icono">
+                    <h1 id="temploTitle">Templo</h1>
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <h2 id="señoraRefugio">Nuestra señora del Refugio</h2>
+                <p>Mariano Matamoros No. 213 centro, Colima.</p>
+                <h3>7:00 PM</h3>
+                <button onclick="ubicacion()"><i class="fa-solid fa-location-dot" id="icono"></i></button>
+            </div>
+        </div>
+
+        <div class="Lugar" data-aos="zoom-in-right">
+            <img src="img/Hacienda.jpg" alt="Templo">
+            <div class="Detalles">
+                <div>
+                    <img src="img/brindis.png" alt="icono">
+                    <h1 id="jardinTitle">Jardin de Eventos</h1>
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <h2 id="haciendaTitle">Hacienda Pastores</h2>
+                <p>Prol. Hidalgo, Rumbo al Chivato, Villa de Alvarez.</p>
+                <h3>8:30 PM</h3>
+                <button onclick="ubicacion2()"><i class="fa-solid fa-location-dot"></i></button>
+            </div>
+        </div>
+    </div>
+    <!--Agenda del evento-->
+    <div class="Itinerario" data-aos="fade-up">
+        <h2 id="itinerarioTitle">Itinerario</h2>
+        <ul><!--La etiqueta ul es una lista desordenada, en otras palabras, creas la estructura de la lista-->
+            <li><!--La etiqueta li es lo contrario a ul, aqui ya no es la estructura, si no el contenido-->
+                <img src="img/church.png" alt="catedral"> 7:00 pm
+            </li><br>
+            <li>
+                <img src="img/icono recepcion.png" alt="recepcion"> 8:30 pm
+            </li><br>
+            <li>
+                <img src="img/cena.png" alt="cena"> 9:30 pm
+            </li><br>
+            <li>
+                <img src="img/brindis.png" alt="catedral"> 10:30 pm
+            </li><br>
+            <li>
+                <img src="img/carrito.png" alt="catedral"> 3:30 am
+            </li><br>
+        </ul>
+    </div>
+
+    <!--Vestimenta-->
+    <div class="Vestimenta" data-aos="zoom-in-left">
+        <h2 id="codigoTitle">Codigo de vestimenta</h2>
+        <div>
+            <div>
+                <img src="img/Dama.png" alt="Dama">
+                <p>Dama</p>
+            </div>
+            <div>
+                <p id="formal">Formal</p>
+            </div>
+            <div>
+                <img src="img/Caballero.png" alt="Dama">
+                <p>Caballero</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="Asistencia" data-aos="flip-down">
+        <h2>Esperamos verte ahi</h2>
+        <div>
+            <p id="asistenciaP">Por Favor confirma tu asistencia lo antes posible</p>
+            <a href="https://forms.gle/7n97KXU9zVjxdXcJ9"><img src="img/asistencia.png" alt="asistencia"></a><!--En este caso, la img esta adentro de "a", para convertir la imagen en un link-->
+        </div>
+    </div>
+
+    <!--Regalo-->
+    <div class="Regalo">
+        <p id="regaloP">Nuestro mejor regalo es tú asistencia, pero si nos quieres hacer algún obsequio, hemos creado las siguientes mesas de regalos...</p>
+        <div class="Mesas">
+            <div class="Mesa">
+                <a href="https://www.lamarina.com.mx"><img src="img/Marina.png" alt="Logo"></a>
+                <p id="marinaCode">MR-00002404</p>
+            </div>
+            <div class="Mesa">
+                <a href="https://www.liverpool.com.mx/tienda/home"><img src="img/Liverpool.png" alt="Logo"></a>
+                <p id="liverpoolCode">51460027</p>
+            </div>
+        </div>
+        <p>O si prefieres en efectivo aquí te dejamos un número de tarjeta</p>
+        <div class="Tarjeta">
+            <i class="fa-regular fa-credit-card"></i>
+            <p>BBVA<br>4152-3140-2366-5683<br>Valentín García Pizano</p>
+        </div>
+    </div>
+    
+    <footer data-aos="fade-up"><h1>Gracias!</h1></footer>
+    <!-- JS -->
+    <script src="temporizador.js"></script>
+    <script src="funcionBotones.js"></script>
+    <!--Se ajusta la duracion de la animacion especifica ease-out-back, por medio de la libreira AOS, claro que, esto es opcional-->
+    <script>
+        AOS.init({
+            easing: 'ease-out-back',
+            duration: 1000
+		});
+    </script>
+    <!--Este script es dedicado a la soclución del zoom-->
+    <script>
+        let navegador = navigator.userAgent;
+        if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i) || window.innerWidth <= 780) {
+            alert("Toma Pop-Up, por entrar con un dispositivo móvil");
+        } else {
+            console.log("No estás usando un móvil");
+        }
+    </script>
+</body>
+</html>

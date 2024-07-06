@@ -1,0 +1,561 @@
+/* Reseteo de estilos*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Playwrite DE Grund", cursive, "sans-serif";
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Importamos los estilos de las fuentes*/
+/*De a fuerzas es asi su estructura, si no hay alguna, no se importa (font-weight es opcional)*/
+@font-face {
+  font-family: "Manuscrita";/*Esto es como declarar una variable, puedes ponerle el nombre que tu quieras*/
+  src: url("fonts/Manuscrita.TTF") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Manuscrita2";
+  src: url(fonts/Manuscrita2.OTF) format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Gothic";
+  src: url(fonts/GOTHICB.TTF) format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "GothicItaly";
+  src: url(fonts/GOTHICI.TTF) format("truetype");
+  font-weight: normal;
+}
+
+@font-face{
+  font-family: 'AnotherDay';
+  src: url(fonts/ANOTHERDAYV2.TTF) format("truetype");
+  font-weight: normal;
+}
+
+@font-face{
+  font-family: "GothicNormal";
+  src: url(fonts/GOTHIC.TTF) format("truetype");
+  font-weight: normal;
+}
+
+@font-face{
+  font-family: "Jhony";
+  src: url(fonts/Jhony.OTF) format("truetype");
+  font-weight: normal;
+}
+
+body {
+  max-width: 100%;/*Lo maximo que puede agarrar el cuerpo*/
+  padding: 100px 0;/*El espacio entre la caja por dentro*/
+  background-image: url(img/fondo\ flores.jpg);
+  background-repeat: repeat;/*Hace que la imagen colocada se repita en el fonod*/
+  display: grid;/*Un metodo de colocar cosas, como display flex*/
+  place-items: center;/*Va de la mano con display grid, centra todos los items*/
+  gap: 200px;/*Es el espacio entre cada div*/
+  color: var(--main-color);/*Es la variable declarada, siempre tienes que poner var()*/
+}
+/*Root es para declarar variables en css, en este caso es un color, para que se coloco el color
+solo tienes que colocar el mismo nombre en cualqueiera y ya*/
+:root {
+  --main-color: rgb(180, 76, 50);
+}
+
+/** Estilos **/
+header,
+footer {
+  width: 100%;
+}
+
+header h1 {
+  font-size: 180px;
+  text-align: center;
+  font-family: "Manuscrita", sans-serif;
+  font-weight: normal;
+}
+
+footer h1{
+  font-size: 180px;
+  text-align: center;
+  font-family: "Manuscrita2",sans-serif;
+  font-weight: normal;
+  position: relative;
+  bottom: 20rem;
+}
+
+
+h2 {
+  font-family: "Manuscrita", "Playwrite DE Grund", sans-serif;
+  font-size: 50px;
+}
+
+#BtnMusic{
+  display: grid;
+  place-items: center;
+  width: 10rem;/*rem es usado para que se ajuste al dispositivo que se muestre, es una medida resposive*/
+  height: 10rem;
+  background-color: var(--main-color);
+  color: whitesmoke;
+  border-radius: 6rem;
+  cursor: pointer;/*Solo hace que al pasar el mouse en el boton, muestre la manita*/
+  font-size: 3rem;
+}
+
+/*hover, es la animacion o cambio de forma del boton, al momento de pasar el mouse sobre el*/
+#BtnMusic:hover{
+  background-color: whitesmoke;
+  color: black;
+}
+
+
+#timer{
+  position: relative;
+  bottom: 4rem;
+  font-size: 3rem;
+}
+
+.timer{
+  font-size: 11rem;
+  font-family: "GothicNormal";
+}
+
+#letrasTimer{
+  display: grid;
+  place-items: center;
+}
+
+.Fecha {
+  font-size: 100px;
+  text-align: center;
+}
+
+.Collage {
+  width: 100%;
+}
+
+
+.Info {
+  width: 70%;
+}
+
+.Info h1,
+.Info p {
+  font-family: "Jhony", sans-serif;
+  text-align: center;
+}
+
+#encantariaP{
+  position: relative;
+  top: 2rem;
+}
+
+.Info h1 {
+  font-size: 130px;
+}
+
+.Info p {
+  font-size: 70px;
+}
+
+.Sitios {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.Lugar {
+  width: 45%;
+}
+
+.Lugar img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  filter: sepia(0.3) brightness(0.9);
+}
+
+.Detalles {
+  text-align: center;
+}
+
+.Detalles h3 {
+  font-size: 40px;
+}
+
+.Detalles button {
+  margin-top: 20px;
+  font-size: 20px;
+  padding: 5px 25px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: var(--main-color);
+  color: whitesmoke;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+
+.Detalles button:hover {
+  background-color: white;
+  color: black;
+}
+.marquee {
+  width: 1500px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-block;
+  padding-left:100%;
+  animation: marquee 100s linear infinite;
+}
+
+.marquee-content img{
+  width: 280rem;
+  height: 50rem;
+}
+
+@keyframes marquee {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
+}
+
+.Detalles div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 15px 0;
+}
+
+.Detalles div h1 {
+  font-size: 50px;
+  font-family: "Manuscrita2", "Playwrite DE Grund", "sans-serif";
+}
+
+.Detalles h2{
+  padding: 15px 0;
+  font-size: 40px;
+}
+
+.Detalles div img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.Detalles div i {
+  font-size: 70px;
+}
+
+.Itinerario {
+  width: 50%;
+  text-align: center;
+}
+
+.Itinerario h2 {
+  margin-bottom: 15px;
+}
+
+.Itinerario ul {
+  list-style: none;
+  display: grid;
+  place-items: center;
+  gap: 15px;
+}
+
+.Itinerario ul li {
+  width: 50%;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Itinerario ul li img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.Vestimenta {
+  width: 100%;
+  text-align: center;
+}
+
+.Vestimenta h2{
+  font-family: "Manuscrita2";
+  font-weight: normal;
+}
+
+.Vestimenta div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.Vestimenta div div {
+  display: flex;
+  flex-direction: column;
+}
+
+.Vestimenta div div img {
+  width: 50%;
+}
+
+.Vestimenta div div p {
+  font-family: "GothicItaly", "Playwrite DE Grund", "sans-serif";
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+.Asistencia {
+  text-align: center;
+}
+
+.Asistencia h2{
+  font-family: "Manuscrita2";
+  font-weight: normal;
+}
+
+.Asistencia div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.Asistencia div p {
+  width: 50%;
+  font-size: 30px;
+}
+
+.Asistencia div img {
+  width: 200px;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+
+.Asistencia div img:hover,
+.Asistencia div img:active {
+  filter: drop-shadow(0 4px 6px var(--main-color));
+}
+
+.Regalo {
+  display: grid;
+  gap: 50px;
+}
+
+.Regalo p {
+  font-size: 30px;
+  text-align: center;
+}
+
+.Regalo .Mesas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.Regalo .Mesa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.Regalo .Mesa p {
+  font-size: 20px;
+}
+
+.Regalo .Mesa img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.Regalo .Tarjeta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--main-color);
+  color: whitesmoke;
+  padding: 20px 0;
+}
+
+.Regalo .Tarjeta i {
+  font-size: 200px;
+}
+
+#marinaCode{
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+#liverpoolCode{
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+/*Responsividad del celular*/
+@media (max-width: 1050px) {
+  body {
+    width: 100%;
+    gap: 150px;
+  }
+
+  .Fecha {
+    font-size: 80px;
+  }
+
+  .Sitios {
+    display: grid;
+    place-items: center;
+    gap: 80px;
+  }
+
+  .Lugar {
+    width: 80%;
+    position: relative;
+    bottom: 12rem;
+  }
+
+  .Info{
+    display: grid;
+    place-items: center;
+    position: relative;
+    bottom: 10rem;
+  }
+
+  .timer{
+    letter-spacing: 1.5rem;/*Esto hace que se separen un poco las letras*/
+    font-size: 7rem;
+  }
+
+  #letrasTimer{
+    font-size: 6.3rem;
+  }
+  
+  .marquee {
+    width: 1500px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .marquee-content {
+    display: inline-block;
+    padding-left:100%;
+    animation: marquee 100s linear infinite;
+  }
+
+  .marquee-content img{
+    width: 280rem;
+    height: 50rem;
+  }
+  
+  @keyframes marquee {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+  }
+
+
+  #temploTitle{
+    font-size: 5rem;
+  }
+
+  #señoraRefugio{
+    font-family: "GothicItaly" ,sans-serif;
+    font-size: 3.9rem;
+  }
+
+  #jardinTitle{
+    font-size: 5rem;
+  }
+
+  #haciendaTitle{
+    font-size: 3.9rem;
+    font-family: "GothicItaly" ,sans-serif;
+  }
+
+  #itinerarioTitle{
+    font-size: 8rem;
+    font-family: "Manuscrita2", sans-serif;
+    font-weight: normal;
+  }
+
+  #codigoTitle{
+    font-size: 7rem;
+  }
+
+  .Vestimenta{
+    position: relative;
+    bottom: 13rem;
+  }
+
+  .Vestimenta img{
+    margin-top: 8rem;
+  }
+
+  #formal{
+    font-size: 3.5rem;
+  }
+
+  .Detalles p {
+    font-size: 30px;
+  }
+
+  .Asistencia h2{
+    font-size: 8rem;
+  }
+
+  #asistenciaP{
+    font-size: 3rem;
+  }
+
+  .Detalles button {
+    font-size: 50px;
+    padding: 10px 35px;
+  }
+
+  .Itinerario {
+    width: 80%;
+    position: relative;
+    bottom: 13rem;
+  }
+
+  .Asistencia div img {
+    width: 200px;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+  }
+
+  .Asistencia{
+    position: relative;
+    bottom: 15rem;
+  }
+
+  .Regalo{
+    position: relative;
+    bottom: 20rem;
+  }
+
+  .Regalo p {
+    padding: 0 5%;
+  }
+
+}
